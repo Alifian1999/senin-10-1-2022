@@ -1,0 +1,204 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.astronot{
+    height: 100%;
+}
+.logo{
+    height: 80%;
+    margin-top: 7px;
+}
+.navbar-container{
+max-width: 100%;
+height: 10%;
+margin-bottom: 10px;
+display: flex;
+justify-content: space-between;
+padding: 0 20px;  
+border-bottom: 1px solid white;
+box-shadow: 0 0 6px gray;  
+}
+
+.body-container{
+    border: 1;
+    border: 1px solid white;
+    box-shadow: 0 0 6px gray;  
+    max-width: 40%;
+    height: 85%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.img-body{
+    width: 100%;
+    height: 35%;   
+}
+.main-teks h1{
+    margin-bottom: 10px;
+}
+.main-info{
+    margin: auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+.mars{
+    width: 100%;
+    border-radius: 12px;
+}
+.info-container{
+    margin-top: 30px;
+    
+}
+.mainInfo-A{
+    background-color: gray;
+}
+th,td{
+    padding: 10px;
+}
+h1{
+    margin-bottom: 20px;
+}
+
+
+.main-teks{
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.mySkills{
+    display: flex;
+    margin-top: 35px;
+    height: 45%;
+    
+}
+.skill{
+    margin-bottom: 20px;
+}
+.everything{
+    display: flex;
+    margin-top: 20px;
+    
+}
+.cat{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.mySkills p{
+    width: 90%;
+    text-align: justify;
+}
+.mySkills h2{
+    font-size: 25px;
+}
+
+.main-teks p{
+    text-align: justify;
+    max-width: 98%;
+    margin-right: 24px;
+}
+
+.a1{
+    width: 65px;
+}
+
+nav{
+    border-bottom: 1px solid white ;
+    box-shadow: 0 0 8px gray;
+    display: flex;
+}
+
+nav .left-nav{
+    
+    flex: 50%;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+.left-nav ul li{
+    display: inline;
+    margin-right: 20px;
+}
+.left-nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+nav .right{
+    
+    flex: 50%;
+    display: flex;
+    align-items: center; 
+    justify-content: right;
+    padding: 10px;
+    padding-right: 40px;
+}
+/*align items berfungsi sama seperti margin:0; yaitu rata tengah(vertical)*/
+.contactUs{
+    margin-right: 10px;
+}
+.right a{
+    text-decoration: none;
+    background-color: orangered;
+    padding: 8px 10px;
+    border-radius: 12px;
+    color: black;
+}
+.right a:hover{
+    color: white;
+}
+.logo-nav{
+    cursor: pointer;
+    margin-right: 5%;
+    width: 8%;
+    margin-left: 20px;
+}
+nav ul{
+    margin-left: 35px;
+}
+p span{
+    font-weight: bold;
+}
+nav li a:hover{
+    color: #c42424;
+}
+
+
+
+footer{
+    margin-top: 30px;
+}
+footer h2{
+    font-size: 20px;
+}
+footer p{
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.img-footer img{
+    width: 25%;
+    margin-top: 10px;
+    margin-right: 20px;
+}

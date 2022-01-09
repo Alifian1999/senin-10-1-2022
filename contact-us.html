@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Contact us</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="contact-us.css">
+        <script src="https://kit.fontawesome.com/558e0a74fa.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav> 
+            <div class="left-nav">
+            <img class="logo-nav" src="https://raw.githubusercontent.com/DumbwaysDotId/creating-navbar-and-layouting/master/assets/logo.png" alt="logo">
+            <ul>
+                <li><a href="html.main.html">Home</a></li>
+                <li><a href="">Blog</a></li>
+            </ul>  
+            </div>
+
+            <div class="right">
+                <a class="contactUs" href="contact-us.html">Contact us</a>
+                <a target="blank" href="register.html">Register</a>
+            </div>
+        </nav>  
+
+
+
+
+        <div class="all">
+
+            <div class="left">
+                <h1>Contact Info</h1>
+                <div class="address">
+                    <i class="fas fa-map-marked fa-3x"></i>
+                    <p>Anfield Road, Liverpool, L4 0TH</p>
+                </div>
+                <div class="email-address">
+                    <i class="fas fa-envelope-open-text fa-3x"></i>
+                        <p>chevesar1999@gmail.com</p>
+                </div>
+                <div class="handPhone">
+                    <i class="fas fa-phone-square-alt fa-3x"></i>
+                    <p>13173698311</p>
+                </div>
+                <footer>
+                    <a href="https://www.facebook.com/"> <i class="fab fa-facebook-f fa-2x"></i></a>
+                    <a href="https://www.instagram.com/"> <i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="https://twitter.com/?lang=en"> <i class="fab fa-twitter fa-2x"></i></a>
+                    <a href="https://id.pinterest.com/"><i class="fab fa-pinterest fa-2x"></i> </a>
+                </footer>
+            </div>
+
+
+            <div class="right">
+                <div class="content-right">
+                    <h1>Send a Message</h1>
+
+                    <form id="form" action="" onsubmit="submitData(event)">
+                        <div class="name">
+                            <div class="error">
+                                <input id="firstName" type="text" placeholder="First Name" >
+                                <small class="first-small"></small>
+                            </div>
+                            <div class="error">
+                                <input id="last-name" type="text" placeholder="Last Name">
+                                <small class="last-small"></small>
+                            </div>
+                        </div>
+                        <div class="email-phone">
+                            <div class="error">
+                                <input id="email" type="email" placeholder="Email Address">
+                                <small class="email-small"></small>
+                            </div>
+                            <div class="error">
+                                <input id="phone" type="number" placeholder="Mobile Number">   
+                                <small class="phone-small"></small>   
+                            </div>                  
+                        </div>
+                        <div class="main-checkbox">
+                            <input type="checkbox" id="html" value="html">
+                            <label for="html">HTML</label>
+                            <input type="checkbox" id="css" value="css">
+                            <label for="css">CSS</label>
+                        </div>
+
+                        <div>
+                            <select id="input-subject">
+                                <option value="">Select your purpose</option>
+                                <option>I'm Hiring</option>
+                                <option>Problem With Our Site</option>
+                            </select>
+                            <small class='subject-small'></small>
+                        </div>
+
+                        <div class="textArea">
+                            <textarea name="" id="text-area" cols="30" rows="10" style="resize: none;" placeholder="Write your message here ..."></textarea>
+                        </div>
+                        <button id="submit" onclick="" >Send</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <script src="contactUs.js" async defer></script>
+    </body>
+</html>
