@@ -1,10 +1,9 @@
 const validasi= function(event){
-    console.log('tes');
-    event.prevenetDefault()
-    let email = document.querySelector('.input-email').value
-    let password = document.querySelector('.inpassword').value
-    let firstName = document.querySelector('.input-firstname').value
-    let countryOrRegion = document.querySelector('#countryOrRegion').value
+    
+    let email = document.getElementById('input-email').value
+    let password = document.getElementById('inpassword').value
+    let firstName = document.getElementById('input-firstname').value
+    let countryOrRegion = document.getElementById('countryOrRegion').value
 
     if(email==''){
         return alert ('email tidak boleh kosong')
@@ -15,4 +14,6 @@ const validasi= function(event){
     }else if(countryOrRegion==''){
         return alert('Select country or Region wajib di isi')
     }
+
+    event.prevenetDefault()
 }
