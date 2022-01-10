@@ -14,7 +14,7 @@
             <img class="logo-nav" src="https://raw.githubusercontent.com/DumbwaysDotId/creating-navbar-and-layouting/master/assets/logo.png" alt="logo">
             <ul>
                 <li><a href="html.main.html">Home</a></li>
-                <li><a href="">Blog</a></li>
+                <li><a href="index.html">Blog</a></li>
             </ul>  
             </div>
 
@@ -28,17 +28,17 @@
        <div class="everything">
            <h1>Create Account</h1>
            <p>Register now! and prepare to become a GM</p>
-           <form action="">
+           <form action="" onsubmit="validasi(event)">
                <div class="input">
-                <input type="text" placeholder="Email" id="input-name" required> 
-                <input class="eye" type="password" placeholder="Password" required> 
+                <input type="text" placeholder="Email" class="input-email" /> 
+                <input class="inpassword" type="text" placeholder="Password"  > 
                 <p class="p-form">*Use 8 or more characters with a mix of letters, numbers & symbols</p>
                 
-                <input type="text" placeholder="First Name" required>
+                <input class="input-firstname" type="text" placeholder="First Name" >
                 <input type="text" placeholder="Last Name">
                 
-                <label for="">Country or Region</label>
-                <select name="" id="">
+                <label for="countryOrRegion">Country or Region</label>
+                <select name="" id="countryOrRegion">
                     <option value="">Please Select</option>
                     <option value="">Indonesia</option>
                     <option value="">Malaysia</option>
@@ -64,6 +64,6 @@
            </footer>
        </div>
         
-        <script src="js.js" async defer></script>
+        <script src="register.js" async defer></script>
     </body>
 </html>

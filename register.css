@@ -1,13 +1,8 @@
 
-html{
-    height: 100%;
-    width: 100%;
-}
-body{
-    height: 100%;
-    width: 100%;
-}
 
+input{
+    margin-top: 10px;
+}
 
 
 
@@ -61,12 +56,13 @@ border: 1px solid white;
 box-shadow: 0 0 3px gray;
 border-radius: 6px;
 width: 30%;
-height: 610px;
+height: 630px;
 margin: auto;
 display: flex;
 flex-direction: column;
 box-sizing: border-box;
 margin-top: 20px;
+margin-bottom: 30px;
 }
 .input{
     display: flex;
@@ -118,8 +114,8 @@ margin-top: 20px;
 .a-footer{
     display: inline;
     text-align: right;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin-top: 40px;
+    margin-bottom: 15px;
 }
 .menu-footer a{
     text-decoration: none;
