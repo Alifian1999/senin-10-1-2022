@@ -23,9 +23,10 @@ nav div.left-side {
 }
 
 nav div.right-side {
-  padding-right: 90px;
+  padding-right: 0px;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: row;
+  justify-content: right;
 }
 
 nav ul {
@@ -56,6 +57,8 @@ nav .right-side a {
   border-radius: 10px;
   color: #fff;
   text-decoration: none;
+  margin-right: 10px;
+  padding: 8px 15px;
 }
 
 /* Blog Form */
@@ -264,20 +267,43 @@ select {
 }
 
 #blog-list-item-js{
-  border: 1px solid red;
+  border: 1px solid gray;
   display: flex;
   justify-content: right;
   margin-left: 200px;
+  height: 100%;
+  margin-bottom: 0px;
 }
 
 #blog-list-item-js input{
-  padding: 5px;
+  padding: 3px;
 }
 #detail-blog-content-js input{
-  margin-top:20px; 
+  margin-top:10px; 
+  width:69.5%;
 }
 
 small{
   font-size: 10px;
   text-decoration: none;
 }
+
+.blog-list-item .blog-content{
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-content-input{
+ 
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.blog-content-input input{
+  width: 100%;
+  margin-top:3px;
+  margin-bottom: 3px;
+  box-sizing: border-box;
+}
+

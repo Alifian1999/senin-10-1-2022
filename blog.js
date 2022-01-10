@@ -6,34 +6,47 @@
    //function ini berfungsi untuk menambah postingan,yaitu dengan cara mengambil nilai2 dari input yang berasal dari fungsi renderBlog
      event.preventDefault()
      //function preventDefault() berfungsi supaya browser tidak merefresh secara otomatis
-    
+     let category = document.getElementById('input-blog-category').value
      let author = document.getElementById('input-blog-author').value
      let title = document.getElementById('input-blog-title').value
      let content= document.getElementById('input-blog-content').value
      let image= document.getElementById('input-blog-image').files
 
-     console.log(title)
+     if(author==''){
+      return alert('author tidak boleh kosong')
+    }else if(title==''){
+      return alert('title tidak boleh kosong')
+    }else if(content==''){
+      return alert('content tidak boleh kosong')
+    }else if(category==''){
+      return alert('category tidak boleh kosong')
+    }
 
      image= URL.createObjectURL(image[0])
 
      let blog={
          id: Date.now(),
-         //date.now merupakan keyword dari javascript yang menunjukkan berapa milisecond dari 1 january
+         //date.now merupakan keyword dari javascript yang menunjukkan berapa milisecond dari tgl 1 january
          title,
          content,
          image,
          author, 
          postAt: new Date(),
+         category,
          //new.date adalah keyword dari javascript yang menunjukkan tanggal dan waktu pada pada saat ini
      }
      document.getElementById('input-blog-title').value=''
      document.getElementById('input-blog-content').value=''
      document.getElementById('input-blog-author').value=''
+     document.getElementById('input-blog-category').value=''
      //documen.getElement valuenya sama dengan string kosong berfungsi apabila data yang kita isi di input sudah disubmit maka secara otomatis data2 yg sebelumnya ada di input menjadi kosong
 
      blogs.push(blog);
      //berfungsi untuk menambahkan data di array dan meletakannya di array yang terakhir dan ini juga menambah panjang(index) dari array      
      renderBlog()
+
+     
+      
  }
 
 
@@ -70,6 +83,9 @@
       <div class="detail-blog-content">
         ${getFullTime(new Date())} | ${blogs[i].author}
       </div>
+      <div>
+      <p>Category : ${blogs[i].category}</p>
+      </div>
       <p>
         ${blogs[i].content}
       </p>
@@ -100,6 +116,9 @@ function firstBlogPost(){
     </h1>
     <div class="detail-blog-content">
       12 Jul 2021 22:30 WIB | Ichsan Emrald Alamsyah
+    </div>
+    <div class="detail-blog-category">
+    <p> Category : Pendidikan</p>
     </div>
     <p>
       Ketimpangan sumber daya manusia (SDM) di sektor digital masih
@@ -167,9 +186,9 @@ function firstBlogPost(){
  }
   getDistanceTime(new Date())
 
-//  setInterval(()=>{
-//    renderBlog()
-//  },3000)
+ setInterval(()=>{
+    renderBlog()
+  },60000)
 
 //author
 //category
@@ -211,18 +230,23 @@ const editBlog= function(id){
       </div>
       <div class="blog-content">
         <div class="btn-group">
-          <button class="btn-edit" onclick="saveBlog(${id})">Save</button>
+          <button class="btn-edit" onclick="saveBlog(${id})" style="cursor:pointer">Save</button>
           <button class="btn-delete" style="cursor:pointer" onclick="deleteBlog(${blogs[i].id})">Delete</button>
         </div>
+        <div class="blog-content-input">
         <h1>
-          <input class="edit-input-text" type="text" value="${blogs[i].title}"/><small>  *input your title</small>
+          <input class="edit-input-title" type="text" value="${blogs[i].title}"/> 
         </h1>
         <div class="detail-blog-content" id="detail-blog-content-js">
-          ${getFullTime(new Date())} | <input type="text" class="edit-input-text" value="${blogs[i].author}"/><small>  *input your name</small>
+          ${getFullTime(new Date())} | <input type="text" class="edit-input-author" value="${blogs[i].author}"/> 
         </div>
+        
+        <input type="text" class="edit-input-category" value="${blogs[i].category}"/>
+        
         <p>
-          <input type="text" class="edit-input-text" value="${blogs[i].content}" <small>  *input your content</small>
+          <input type="text" class="edit-input-content" value="${blogs[i].content}"/>
         </p>
+        </div>
       </div>
     </div>`
     }
@@ -232,15 +256,17 @@ const editBlog= function(id){
 
 const saveBlog= function(id){
   console.log(id);
-  let author = document.querySelector(`.edit-input-text`).value
-  let title = document.querySelector(`.edit-input-text`).value
-  let content= document.querySelector(`.edit-input-text`).value
+  let author = document.querySelector(`.edit-input-author`).value
+  let title = document.querySelector(`.edit-input-title`).value
+  let content= document.querySelector(`.edit-input-content`).value
   let image= document.querySelector(`.edit-input`).files
+  let category= document.querySelector(`.edit-input-category`).value
   image= URL.createObjectURL(image[0])
   //variable diatas berfungsi memberi tau javascript untuk menyimpan value input di masing2 nama variable
 
   const blog = {
     id: id,
+    category,
     author,
     title,
     content,
@@ -248,6 +274,16 @@ const saveBlog= function(id){
     postAt: new Date()
   }
   //objek blog berfungsi untuk menyimpan atau nilai2 inputan menjadi satu wadah
+  if(author==''){
+    return alert('author wajib di isi')
+  }else if(title==''){
+    return alert('title wajib di isi')
+  }else if(content==''){
+    return alert ('content wajib di isi')
+  }else if(category==''){
+    return alert('category wajib di isi')
+  }
+
 
   for(let i=0;i<blogs.length;i++){
     if(blogs[i].id === id){
@@ -256,6 +292,7 @@ const saveBlog= function(id){
     }
   }
   renderBlog()
-  //renderblog dipanggil kesini untuk menyediakan struktur dan menampilkan value2 yang sudah diedit
+  //renderblog dipanggil kesini untuk menyediakan struktur dan menampilkan value2 yang sudah diedit ke browser
   getDistanceTime(blog.postAt)
 }
+
