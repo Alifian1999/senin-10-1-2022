@@ -3,7 +3,7 @@
  //variable blogs berfungsi untuk menampung data dari blog
 
  function addBlog(event){
-   //function ini berfungsi untuk menambah postingan,yaitu dengan cara mengambil nilai2 dari input yang berasal dari fungsi renderBlog
+   //function ini berfungsi untuk menambah postingan,yaitu dengan cara mengambil nilai2 dari input dan akan memasukkan nilainya ke function renderBlog()
      event.preventDefault()
      //function preventDefault() berfungsi supaya browser tidak merefresh secara otomatis
      let category = document.getElementById('input-blog-category').value
@@ -51,7 +51,7 @@
 
 
  function renderBlog(){
-   //renderBlog adalah method yg berfungsi untuk menyimpan nilai' input dan mengirim datanya ke addBlog apabila kondisi didalamnya terpenuhi
+   //renderBlog adalah method yg berfungsi untuk menyimpan nilai' input dari function addBlog
    let contentContainer = document.getElementById('contents')
    //contents disini merujuk pada data yang di HTML.
    contentContainer.innerHTML= firstBlogPost()
